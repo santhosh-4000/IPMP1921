@@ -21,4 +21,26 @@ vector<int> singleNumber(vector<int> nums)
         return ans;
     }
 
-
+//O(N) time
+vector<int> singleNumber(vector<int> nums) 
+    {
+        // Code here.
+        int x=0;
+        vector<int> ans(2,0);
+        
+        for(auto &i: nums)
+            x^=i;
+        
+        int set_bit=x^(x&(x-1));
+        
+        for(auto &i: nums){
+            if(set_bit&i)
+                ans[0]^=i;
+            else
+                ans[1]^=i;
+        }
+        
+        sort(ans.begin(),ans.end());
+        
+        return ans;
+    }
