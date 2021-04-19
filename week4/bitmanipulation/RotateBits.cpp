@@ -28,5 +28,5 @@
             return vec;
         }
 
-//(n<<d)&&(n>>(31-d)) - anticlockwise
-//(n>>d)&&(n<<(31-d)) -
+//(n<<d)&&(n>>(32-d)) - anticlockwise
+//(n>>d)&&(n<<(32-d)) -
