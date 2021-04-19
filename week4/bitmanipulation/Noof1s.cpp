@@ -24,3 +24,26 @@ int hammingWeight(uint32_t n) {
         
         return ans;
     }
+
+//lookup table O(1)
+class Solution {
+public:
+    
+    int table[256];
+    
+    Solution(){
+        table[0] = 0;
+        for(int i=1;i<256;i++){
+            table[i]=table[i/2]+(i&1);
+        }
+    }
+    
+    int hammingWeight(uint32_t n) {
+        
+        return (table[n&0xff] + 
+               table[(n>>8)&0xff]+
+               table[(n>>16)&0xff]+
+               table[(n>>24)&0xff]);
+        
+    }
+};
