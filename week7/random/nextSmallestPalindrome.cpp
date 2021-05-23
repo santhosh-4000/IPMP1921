@@ -1,6 +1,7 @@
 //https://www.interviewbit.com/problems/next-smallest-palindrome/
-//
+//o(n) time O(n) space
 bool areAll9s(string& A){
+    //O(n)
     for(char &ch: A)
         if(ch!='9')
             return 0;
@@ -13,6 +14,7 @@ string addMid(string &A){
     int i=(n-1)/2,j=(n-1)/2;
     if(!(n&1))j+=1;
     
+    //O(n)
     while(c){
         int num=A[i]-'0';
         num+=c;
@@ -36,6 +38,7 @@ string Solution::solve(string A) {
     string ans="";
     int n=A.size();
     
+    //O(n)
     if(areAll9s(A)){
         ans+='1';
         for(int i=1;i<n;i++){
@@ -50,6 +53,7 @@ string Solution::solve(string A) {
     int i=n/2-1,j=(n+1)/2;
     //if(n&1) j+=1;
     
+    //O(n)
     while(i>=0&&A[i]==A[j]){
         i--,j++;
     }
@@ -57,6 +61,7 @@ string Solution::solve(string A) {
         return addMid(A);
     }
     bool flag=0;
+    //O(n)
     while(i>=0&&(A[i]>=A[j]||flag==1)){
         A[j]=A[i];
         j++,i--;
