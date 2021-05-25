@@ -1,5 +1,5 @@
 
-//t=o(n(logn)2),s=o(n)
+//t=o(n(logn)2),s=o(nlogn)
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -45,7 +45,7 @@ float closestUtil(Point p[],int i, int j){
     float dr=closestUtil(p,mid+1,j);
     float d=min(dl,dr);
     
-    vector<Point> strip;
+    vector<Point> strip;//o(n)
     
     for(int k=i;k<=j;k++){
         if(abs(p[k].x-mid_pt.x)<d)
