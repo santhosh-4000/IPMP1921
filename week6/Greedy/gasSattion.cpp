@@ -17,3 +17,5 @@ int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
         
         return (total>=0)?res:-1;
     }
+
+//brute force considers every path which takes o-n2 time
