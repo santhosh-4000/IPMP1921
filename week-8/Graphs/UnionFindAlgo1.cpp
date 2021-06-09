@@ -34,8 +34,12 @@ int find(vector<int>& parent,int u){
 }
 
 void Union(vector<int>& parent,int u,int v){
+    //for naive union uncomment below
+    /*
+    u=find(parent,u);
+    v=find(parent,v);
+    */
     parent[u]=v;
-    
 }
 
 bool findCycle(Graph* g){
