@@ -1,6 +1,7 @@
 //https://www.geeksforgeeks.org/union-find/
 
-//uion o-1 find o-V
+//uion o-1 here but naive o-n as we have to use find
+//find o-V
 //algo:O(v2) since outer loop may run atmost v-1 times
 #include <bits/stdc++.h>
 using namespace std;
