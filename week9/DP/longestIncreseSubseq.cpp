@@ -1,6 +1,7 @@
 //https://leetcode.com/problems/longest-increasing-subsequence/submissions/
 
 //O(n2) time O(n) space
+
 int lengthOfLIS(vector<int>& nums) {
         
         vector<int> L(nums.size());
