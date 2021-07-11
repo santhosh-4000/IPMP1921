@@ -29,3 +29,5 @@
         
         return ans;
     }
+
+//O(n) time O(1) space is possible
