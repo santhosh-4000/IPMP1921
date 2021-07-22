@@ -34,3 +34,31 @@ int trap(vector<int>& height) {
     }
 
 //brute force takes O(n2) time
+
+//O(n) time O(1) space
+//2 pts method
+int trap(vector<int>& height) {
+        int n=height.size();
+        int l=0,h=n-1;
+        
+        int left=0,right=0,res=0;
+        
+        while(l<=h){
+            if(height[l]<=height[h]){
+                if(left<height[l])
+                    left=height[l];
+                else
+                    res+=(left-height[l]);
+                l++;
+            }
+            else{
+                if(right<height[h])
+                    right=height[h];
+                else
+                    res+=(right-height[h]);
+                h--;
+            }
+        }
+        
+        return res;
+    }
